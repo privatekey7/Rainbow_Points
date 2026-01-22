@@ -1,0 +1,55 @@
+{
+  "name": "rainbow-wallet-manager",
+  "version": "1.0.0",
+  "description": "Автоматический инструмент для работы с кошельками Rainbow Wallet с использованием приватных ключей",
+  "type": "module",
+  "main": "dist/rainbow.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/rainbow.js",
+    "dev": "tsc && node dist/rainbow.js",
+    "install-patchright": "npx patchright install chromium",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "postinstall": "npm run install-patchright && npm run build"
+  },
+  "keywords": [
+    "rainbow",
+    "wallet",
+    "crypto",
+    "automation",
+    "patchright",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "better-sqlite3": "^12.2.0",
+    "exceljs": "^4.4.0",
+    "patchright": "^1.55.2",
+    "prompts": "^2.4.2",
+    "readline-sync": "^1.4.10",
+    "viem": "^2.37.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.19.17",
+    "@types/prompts": "^2.4.9",
+    "@types/readline-sync": "^1.4.8",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "overrides": {
+    "fast-csv": "^5.0.5",
+    "rimraf": "^5.0.5",
+    "glob": "^10.5.0",
+    "js-yaml": "^4.1.1",
+    "unzipper": "^0.12.3"
+  }
+}
